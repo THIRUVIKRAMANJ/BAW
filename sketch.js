@@ -17,7 +17,7 @@ bullet.velocityX=speed
 function draw() {
   background(0);  
   if(bullet.isTouching(wall)){
-    deformation=(0.5*bulletWeight*bulletSpeed*bulletSpeed)/(ThicknessofWall*ThicknessofWall*ThicknessofWall);
+    deformation=(0.5*weight*speed*speed)/(thickness*thickness*thickness);
     bullet.velocityX=0;
     
   
@@ -25,7 +25,7 @@ function draw() {
     bullet.shapeColor="green"
   }
 
-if(deformation>10){
+if(deformation>=10){
   bullet.shapeColor="red"
 }
   }
